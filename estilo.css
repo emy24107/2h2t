@@ -1,27 +1,58 @@
-* {
+*{
     margin: 0;
     padding: 0;
 }
-.menu {
-    width: 100%;
-    height: 50px;
-    background-color: rgb(238, 112, 112);
-    text-align: center;
+:root{
+    --cor-fundo:rgb(29, 141, 141);
+    --cor-fonte:rgb(22, 18, 92);
+    --cor-hover:rgb(61, 100, 54);
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.header{
+    background-color: var(--cor-fundo);
+    position: sticky;
+    top: 0;
+    width: 100vw;
+}
+.logo{
+    display:inline-block;
+}
+.nav{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--cor-fundo);
+    overflow: hidden;
+}
+.menu{
+width: 100%;
+height: 60px;
+background-color: rgb(62, 71, 53);
+color: blanchedalmond;
+font-size: 30px;
+text-align: center;
+}
+.conteudo_narco{
+    width: 100px;
 }
 .rodape{
+    width: 100%;
     text-align: center;
 }
-@media screen and (min-width: 768px ) {
+@media screen and (min-width:768px){
     .menu{
         height: 100px;
-        background-color: rgb(72, 175, 175);
-    }
-}
-@media screen and (min-width: 1280px ){
-    .menu{
-        height: 150px;
-        background-color: rgb(35, 15, 90);
-        color: aliceblue;
+        background-color: rgb(33, 154, 202);
+        color: navy;
         font-size: 64px;
+        text-align: center;
     }
+    .conteudo_narco{
+        display: flex;
+}
 }
