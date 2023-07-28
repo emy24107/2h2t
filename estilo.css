@@ -3,9 +3,9 @@
     padding: 0;
 }
 :root{
-    --cor-fundo:rgb(29, 141, 141);
+    --cor-fundo:rgb(109, 166, 184);
     --cor-fonte:rgb(22, 18, 92);
-    --cor-hover:rgb(61, 100, 54);
+    --cor-hover:rgb(50, 175, 192);
 }
 a{
     text-decoration: none;
@@ -22,6 +22,10 @@ ul{
 .logo{
     display:inline-block;
 }
+#logo{
+    height: 17vh;
+    width: 10vw;
+}
 .nav{
     width: 100vw;
     height: 100vh;
@@ -29,13 +33,49 @@ ul{
     background-color: var(--cor-fundo);
     overflow: hidden;
 }
-.menu{
-width: 100%;
-height: 60px;
-background-color: rgb(62, 71, 53);
-color: blanchedalmond;
-font-size: 30px;
-text-align: center;
+.menu a {
+display: block;
+padding: 30px;
+color: var(--cor-fonte);
+}
+.menu a:hover{
+    background-color: var(--cor-hover);
+}
+.nav {
+    max-height: 0;
+    transition: max-height   .5s ease-out;
+}
+.hamb {
+    cursor: pointer;
+    float: right;
+    padding: 35px 20px;
+}
+.hamb-line {
+    background-color: var(--cor-fonte);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+}
+.hamb-line::before,
+.hamb-line::after{
+    background-color: var(--cor-fonte);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transform: all .2 ease-out;
+    width: 100%;
+
+}
+.hamb-line::before {
+    top: 5px;
+}
+.hamb-line::after{
+    top: 5px;
+}
+.side-menu{
+    display: none;
 }
 .conteudo_narco{
     width: 100px;
@@ -47,7 +87,7 @@ text-align: center;
 @media screen and (min-width:768px){
     .menu{
         height: 100px;
-        background-color: rgb(33, 154, 202);
+        background-color: rgb(127, 176, 194);
         color: navy;
         font-size: 64px;
         text-align: center;
