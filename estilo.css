@@ -3,9 +3,9 @@
     padding: 0;
 }
 :root{
-    --cor-fundo:rgb(109, 166, 184);
-    --cor-fonte:rgb(22, 18, 92);
-    --cor-hover:rgb(50, 175, 192);
+    --cor-fundo:rgb(49, 145, 81);
+    --cor-fonte:rgb(9, 44, 24);
+    --cor-hover:rgb(101, 204, 140);
 }
 a{
     text-decoration: none;
@@ -72,13 +72,24 @@ color: var(--cor-fonte);
     top: 5px;
 }
 .hamb-line::after{
-    top: 5px;
+    top: -5px;
 }
 .side-menu{
     display: none;
 }
-.conteudo_narco{
-    width: 100px;
+.side-menu:checked ~ nav {
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line{
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
 }
 .rodape{
     width: 100%;
@@ -89,8 +100,15 @@ color: var(--cor-fonte);
         height: 100px;
         background-color: rgb(127, 176, 194);
         color: navy;
-        font-size: 64px;
-        text-align: center;
+       
+    }
+    @media screen and (min-width: 1280px) {
+        .menu{
+            height: 150px;
+            background-color: rgb(211, 211, 211);
+            color: black;
+            font-size: 64px;
+        }
     }
     .conteudo_narco{
         display: flex;
