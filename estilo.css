@@ -95,22 +95,28 @@ color: var(--cor-fonte);
     width: 100%;
     text-align: center;
 }
-@media screen and (min-width:768px){
-    .menu{
-        height: 100px;
-        background-color: rgb(127, 176, 194);
-        color: navy;
-       
+@media screen and (min-width:820px){
+    .nav {
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
     }
-    @media screen and (min-width: 1280px) {
-        .menu{
-            height: 150px;
-            background-color: rgb(211, 211, 211);
-            color: black;
-            font-size: 64px;
-        }
+    .menu li {
+    float: left;
     }
-    .conteudo_narco{
-        display: flex;
+    .menu a:hover {
+        background-color: transparent;
+    }
+    .hamb{
+        display: none;
+    }
+    .menu li{
+        text-decoration: underline;
+    }
 }
-}
+    @media screen and (min-width: 1028px) {
+        
+    }
