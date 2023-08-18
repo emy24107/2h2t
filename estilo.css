@@ -6,6 +6,8 @@
     --cor-fundo:rgb(49, 145, 81);
     --cor-fonte:rgb(9, 44, 24);
     --cor-hover:rgb(101, 204, 140);
+    --cor-clara-fundo: rgb(209, 245, 219);
+    
 }
 a{
     text-decoration: none;
@@ -94,6 +96,13 @@ color: var(--cor-fonte);
 .rodape{
     width: 100%;
     text-align: center;
+}
+div[class^="item-"]{
+    background-color: var(--cor-clara-fundo);
+    padding: 2px;
+    width: calc(100vw - 4px);
+    height: 50vh;
+    margin: 2px;
 }
 @media screen and (min-width:820px){
     .nav {
